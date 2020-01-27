@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- viewport-taggen - ett måste i din HTML för RWD -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!-- en reset CSS som gör att vissa defaultinställningar tolkas lika oavsett webbläsare - kan vara bra att ha oavsett RWD eller inte -->
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Responsive Web Design - Grunder</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="title">
+      <h1>Responsive Web Design (RWD)</h1>
+    </div>
+    <header class="header">
+      <p>
+        <strong>Vad är Responsive Web Design?</strong>
+        Betyder att layouten ändras baserat på den enhet (mobil, tablet, desktop) som använder sitter på. Samma
+        HTML-element (i stor utsträckning). Brytpunkter definerar i CSS med hjälp av mediaqueries.
+        <strong>Mobile-first</strong>
+        Är en strategi där man skapar layout för mobilen först och sedan för desktop. Varför? Många hävdar att detta
+        approach fokuserar mer på huvudinnehållet. Du behöver oftast mindra CSS-regler för mobil och det är sedan
+        enklare att lägga till CSS-regler för desktop än tvärtom. När du skriver CSS för mobil-first använder du
+        <em>min-width</em> i dina mediaqueries istället för <em>max-width</em>
+      </p>
+    </header>
+    <main class="main">
+      <nav class="main-nav">
+        <p>
+          <strong>CSS Flexbox</strong>
+Använd flexibiliteten med CSS Flexbox. Använd en madiaquery och byt mellan <i>flex-direction: row</i>  och <i>flex-direction: column</i>. Du kan även använda <i>flex-wrap: wrap</i> för att låta element som inte får plats "falla" ner till nästa rad. Använd även <i>flex: &lt;number&gt;</i> för att göra att element förhåller sig mindre/större i samma flex-container. Du kan även använda <i>order: &lt;number&gt;</i>   för att byta ordning på element.   </p>
+      </nav>
+
+      <section class="content">
+
+        <h2>RWD: Tips och strategier</h2>
+        <div class="main-picture">
+          <img src="images/rwd.png" alt="Responsive Web Design">
+        </div>
+        <article class="rwd-directions">
+
+          <div class="direction">
+            <h2>Tips #1</h2>
+            <strong>
+                Glöm inte viewport-taggen!</strong>
+                <p>Ska stå innanför &lt;head&gt;-taggen. <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag" target="_blank">Se länk</a></p>
+                  
+          </div>
+          <div class="direction">
+            <h2>Tips #2</h2>
+            <p><strong>Använd Mediaqueries!</strong></p>
+            <p>IF-sats för skärmbredd i CSS!<a href="https://www.w3schools.com/css/css3_mediaqueries_ex.asp" target="_blank">Se länk</a></p>
+          </div>
+          <div class="direction">
+            <h2>Tips #3</h2>
+            <p><strong>
+                Undvik fasta dimensioner!</strong></p>
+            <p>Använd relativa enheter som %, vh, wh, em och rem samt min-width/min-height samt max-width/max-height.<a href="https://getflywheel.com/layout/choose-css-unit-create-better-site-layouts-how-to/" target="_blank">Se länk</a> </p>
+          </div>
+          <div class="direction">
+            <h2>Tips #4</h2>
+            <p><strong>
+                Gör bilder responsiva!</strong></p>
+                <p>Sätt bilderna till 100% bredd så att de kan stretcha och samtidigt behålla proportionerna. <a href="https://www.w3schools.com/css/css_rwd_images.asp" target="_blank">Se länk</a></p>
+          </div>
+          <div class="direction">
+            <h2>Tips #5</h2>
+            <p><strong>Designa utifrån innehållet!</strong>
+            </p>
+            <p>“Expand until it looks like shit. Time for a breakpoint!”
+
+                - Stephen hay</p>
+          </div>
+          <div class="direction">
+            <h2>Tips #6</h2>
+            <p><strong>Använd moderna layouttekniker!</strong>
+              <p>Som CSS Flexbox och CSS Grid (när vi kommer dit :-)</p>
+            </p>
+          </div>
+
+
+
+      </section>
+      <aside class="sidebar">
+        <p>
+          <strong>Använd rem </strong> Du kan använda enheten <i>rem</i> för att skapa en relativ fontstorlek samt relativ margin/padding. Se i detta kodexempel eller 
+          <a href="https://www.sitepoint.com/understanding-and-using-rem-units-in-css/" target="_blank">denna länk</a>.
+        </p>
+      </aside>
+    </main>
+    <footer class="footer">
+      <p>
+          <strong>Låt dig inspireras! </strong>
+          <a href="http://responsivecss.net/">http://responsivecss.net/</br></a>
+ <a href="https://www.w3schools.com/html/html_responsive.asp">https://www.w3schools.com/html/html_responsive.asp/</br></a>
+ <a href="https://learn.shayhowe.com/advanced-html-css/responsive-web-design/">https://learn.shayhowe.com/advanced-html-css/responsive-web-design/</br></a>
+ <a href="https://internetingishard.com/html-and-css/responsive-design/">https://internetingishard.com/html-and-css/responsive-design/</br></a>
+     
+</p>
+    </footer>
+
+    <p>
+      Nu när vi lärt oss CSS Flexbox är det en utmärkt teknik för RWD! Se här hur Flexbox stöds i olika webbläsare
+      <a href="https://caniuse.com/#feat=flexbox" target="_blank">Can I Use.</a>
+    </p>
+
+  </div>
+</body>
+
+</html>
