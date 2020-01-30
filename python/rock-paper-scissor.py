@@ -3,33 +3,33 @@ from random import randint
 # print("Paper...")
 # print("Scissors...")
 
-player = input("Player, make your move: ").lower()
+player = input("Gör ditt drag - sten, sax eller påse: ").lower()
 rand_num = randint(0,2)
 if rand_num == 0:
-	computer = "rock"
+	computer = "sten"
 elif rand_num == 1:
-	computer = "paper"
+	computer = "påse"
 else:
-	computer = "scissors"
+	computer = "sax"
 
-print(f"Computer plays {computer}" )
+print(f"Datorns tur {computer}" )
 
 if player == computer:
-	print("It's a tie!")
-elif player == "rock":
-	if computer == "scissors":
-		print("player wins!")
+	print("Lika!")
+elif player == "sten":
+	if computer == "sax":
+		print("Du vinner!")
 	else:
-		print("computer wins!")
-elif player == "paper":
-	if computer == "rock":
-		print("player wins!")
+		print("Datorn vinner!")
+elif player == "påse":
+	if computer == "sten":
+		print("Du vinner!")
 	else:
-		print("computer wins!")
-elif player == "scissors":
-	if computer == "paper":
-		print("player wins!")
+		print("Datorn vinner!")
+elif player == "sax":
+	if computer == "påse":
+		print("Du vinner!")
 	else:
-		print("computer wins!")	
+		print("Datorn vinner!")	
 else:
-	print("Please enter a valid move!")
+	print("Skriv sten, sax eller påse!")
